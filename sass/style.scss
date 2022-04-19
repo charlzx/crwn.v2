@@ -1,0 +1,8 @@
+// @import 'reset';
+@use 'config' as config;
+@use 'popup';
+@use 'fromJs';
+
+body {
+   background-color: config.$cream;
+}
