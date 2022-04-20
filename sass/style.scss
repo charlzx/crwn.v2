@@ -1,8 +1,84 @@
-// @import 'reset';
 @use 'config' as config;
 @use 'popup';
 @use 'fromJs';
+@use 'animations';
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: config.$roboto;
+}
 
 body {
-   background-color: config.$cream;
+   background-color: config.$white;
+   color: config.$charcoal;
+   padding: 40px 5% 20%;
+
+   hr {
+      border: 0;
+      background-color: lighten(config.$black, 80%);
+      margin: 20px 0 40px 0;
+      // background-color: red;
+      height: 1px;
+   }
+   
+   header {
+      font-family: config.$roboto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+      a {
+         cursor: pointer;
+         font-size: 2rem;
+         text-decoration: 0;
+         color: inherit;
+         font-weight: 700;
+      }
+
+      svg {
+         cursor: pointer;
+         height: 35px;
+      }
+   }
+
+   .links {
+      display: flex;
+      justify-content: space-between;
+      font-family: config.$roboto;
+      background-color: lighten(config.$gold, 20%);
+      padding: 10px 20px;
+      margin: 20px 0 50px 0;
+      border-radius: 5px;
+      align-items: center;
+      
+      a {
+         color: inherit;
+         text-decoration: none;
+         font-size: 1.15rem;
+
+         &:hover {
+            transform: scale(1.15);
+         }
+         
+      }
+
+      div {
+         span, p {
+            width: 0;
+            background-color: config.$black;
+            border-radius: 5px;
+            height: 3px;
+            visibility: hidden;
+            }
+
+         &:hover p {
+            visibility: visible;
+            animation: load .3s ease-in-out;
+            width: 100%;
+         }
+      }
+   }
+
+   #all {
+      margin: 20px 0 0 0;
+   }
 }
