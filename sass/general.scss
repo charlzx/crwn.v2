@@ -1,0 +1,110 @@
+@use 'config' as *;
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: $roboto;
+}
+
+body {
+   background-color: $white;
+   // border: 1px solid $black;
+   color: $charcoal;
+   padding: 40px 5% 20%;
+
+   hr {
+      border: 0;
+      background-color: lighten($black, 80%);
+      margin: 20px 0 40px 0;
+      // background-color: red;
+      height: 1px;
+   }
+   
+   header {
+      font-family: $roboto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+      a {
+         cursor: pointer;
+         font-size: 2rem;
+         text-decoration: 0;
+         color: inherit;
+         font-weight: 700;
+      }
+
+      svg {
+         cursor: pointer;
+         height: 35px;
+      }
+   }
+
+   .links {
+      display: flex;
+      justify-content: space-between;
+      font-family: $roboto;
+      background-color: $cream;
+      padding: 10px 20px;
+      margin: 20px 0 50px 0;
+      border-radius: 5px;
+      align-items: center;
+      border: 1px solid $black;
+      
+      a {
+         color: inherit;
+         text-decoration: none;
+         font-size: 1.15rem;
+
+         &:hover {
+            transform: scale(1.15);
+         }
+         
+      }
+
+      div {
+         span, p {
+            width: 0;
+            background-color: $black;
+            border-radius: 5px;
+            height: 1px;
+            visibility: hidden;
+            }
+
+         &:hover p {
+            visibility: visible;
+            animation: load .3s ease-in-out;
+            width: 100%;
+         }
+      }
+   }
+
+   #all {
+      margin: 20px 0 0 0;
+
+      & > div {
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 30px;
+
+         button {
+            font-size: 1.05rem;
+            font-family: $roboto;
+            background-color: transparent;
+            border: 0;
+            border-bottom: 1px solid $black;
+            outline: 0;
+            cursor: pointer;
+
+            &:active {
+               color: $tan;
+            }
+         }
+      }
+
+      #allItems {
+         display: grid;
+         grid-template-columns: repeat(5, 1fr);
+         gap: 20px 15px;
+         text-decoration: double;
+      }   
+   }
+}

@@ -1,0 +1,100 @@
+@use 'config' as *;
+
+// grids
+@media screen and (max-width:1200px) {
+   body {
+      & > #all > #allItems {
+         grid-template-columns: repeat(4, 1fr);
+      }
+   }
+}
+
+@media screen and (max-width:900px) {
+   body {
+      & > #all > #allItems {
+         grid-template-columns: repeat(3, 1fr);
+      }
+   }
+}
+
+@media screen and (max-width:785px) {
+   body {
+      padding: 20px 3%;
+
+      & > #all > #allItems {
+         gap: 15px;
+         grid-template-columns: repeat(3, 1fr);
+      }
+   }
+}
+
+@media screen and (max-width:600px) {
+   body {
+      padding: 20px 5%;
+
+      & > #all > #allItems {
+         display: flex;
+         overflow: scroll;
+      }
+   }
+
+   
+   .item-card {
+      overflow: visible;
+      border: 0;
+
+      .imageDiv {
+         border: 1px solid $black;
+         border-bottom: 0;
+         border-radius: 5px 5px 0 0;
+      }
+      .textDiv {
+         width: 250px;
+         border: 1px solid $black;
+         border-radius: 0 0 5px 5px;
+      }
+
+      
+      &:hover {
+         .imageDiv {
+            filter: brightness(75%);
+            transform: scale(1);
+         }
+      }
+   }
+}
+
+// @media screen and (max-width:400px) and (min-width: 351px) {
+//    body {
+//       & > #all > #allItems {
+//          grid-template-columns: 1fr;
+//       }
+
+//       .item-card > .textDiv div {
+//          display: flex;
+//          align-items: center;
+//          justify-content: space-between;
+
+//          p {
+//             margin-right: 10px;
+//          }
+//       }
+//    }
+// }
+
+// @media screen and (max-width:350px) {
+//    body {
+//       & > #all > #allItems {
+//          grid-template-columns: 1fr;
+//       }
+
+//       & > #all > div {
+//          display: block;
+
+//          button {
+//             margin-top: 10px;
+//             font-size: inherit;
+//          }
+//       }
+//    }
+// }

@@ -142,7 +142,6 @@ let defaultItems = [
 ]
 
 let allItems = document.querySelector('#allItems')
-
 let seeAllButton = document.querySelector('#see-all')
 
 defaultItems.forEach(function(item, index){
@@ -153,12 +152,14 @@ defaultItems.forEach(function(item, index){
       <div class="imageDiv">
       </div>
       <div class="textDiv">
-         <p>${item.name}</p>
-         <h3><span>N</span>${item.price}</h3>
+         <div>
+            <p>${item.name}</p>
+            <h3><span>N</span>${item.price}</h3>
+         </div>
          <button>Add to Cart</button>
       </div>
-      <aside class="expand">
-         <img src="img/expand.svg">
+      <aside>
+         <img class="expand" src="img/expand.svg" alt="expand the item card">
       </aside>
    `
 
@@ -176,6 +177,14 @@ defaultItems.forEach(function(item, index){
    // event to display all items
    seeAllButton.addEventListener('click', function(){
       newItem.style.display = "initial"
+   });
+   
+   // expand item card
+   newItem.addEventListener('click', function(e){
+      
+      if (e.target.classList.contains('expand')) {
+         console.log(e.target)
+      }
    });
 })
 
