@@ -184,7 +184,45 @@ defaultItems.forEach(function(item, index){
       
       if (e.target.classList.contains('expand')) {
          console.log(e.target)
+
+         let popup = document.createElement('div')
+         popup.setAttribute('class', 'popup-card')
+
+         popup.innerHTML = `
+            <div class="imageDiv"></div>
+            <div class="textDiv">
+               <h2>${item.name}</h2>
+               <p><span>₦</span>${item.price}</p>
+
+               <div class="desc">
+                  <h3>Description</h3>
+                  <p class="desc-text">
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, consectetur? Maxime minima iste reprehenderit saepe nisi doloremque omnis porro officia totam ducimus delectus aspernatur quas, explicabo velit ea voluptatibus! Minima nihil facilis corrupti suscipit voluptas soluta distinctio dolorem praesentium ab?
+                  </p>
+               </div>
+
+               <button>Add to Cart</button>
+               
+               <aside>
+                  <img class="expand" src="img/cancel.svg" alt="exit the item tag">
+               </aside>
+            </div>
+         `
+         
+         popup.firstElementChild.style.background = `url('${item.image}')`;
+         popup.firstElementChild.style.backgroundRepeat = "no-repeat";
+         popup.firstElementChild.style.backgroundSize = 'cover';
+
+         let overlay = document.createElement('div')
+         overlay.setAttribute('class', 'popup-overlay')
+
+         overlay.appendChild(popup)
+         
+         document.body.style.overflowY = 'hidden'
+         document.body.appendChild(overlay)
       }
    });
+
+   // remove popup
 })
 
