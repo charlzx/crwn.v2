@@ -1,6 +1,7 @@
 @use 'config' as *;
 
 .item-card {
+   position: relative;
    border-radius: 5px;
    overflow: hidden;
    font-family: $roboto;
@@ -17,8 +18,8 @@
    .textDiv {
       position: relative;
       z-index: 30;
-      height: 100px;
-      padding: 10px;
+      height: fit-content;
+      padding: 10px 10px 20px 10px;
       // background-color: $cream;
       background-color: $white;
       align-items: center;
@@ -31,6 +32,37 @@
       span {
          text-decoration: line-through;
          margin-right: 1px;
+      }
+
+      button {
+         margin-top: 10px;
+         padding: 5px 10px;
+         width: 100%;
+         background-color: transparent;
+         border: 1px solid $black;
+         border-radius: 2.5px;
+         cursor: pointer;
+         transition: .2s ease-in-out;
+
+         &:hover {
+            background-color: $black;
+            color: $white;
+         }
+
+         &:active {
+            transform: scale(.95);
+         }
+      }
+   }
+
+   .expand {
+      position: absolute;
+      cursor: pointer;
+      left: 5px;
+      top: 5px;
+
+      img {
+         height: 20px;
       }
    }
 

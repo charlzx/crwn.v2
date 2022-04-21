@@ -142,9 +142,10 @@ let defaultItems = [
 ]
 
 let allItems = document.querySelector('#allItems')
-console.log(allItems)
 
-defaultItems.forEach(function(item){
+let seeAllButton = document.querySelector('#see-all')
+
+defaultItems.forEach(function(item, index){
    let newItem = document.createElement('div')
    newItem.setAttribute('class', 'item-card')
 
@@ -154,7 +155,11 @@ defaultItems.forEach(function(item){
       <div class="textDiv">
          <p>${item.name}</p>
          <h3><span>N</span>${item.price}</h3>
+         <button>Add to Cart</button>
       </div>
+      <aside class="expand">
+         <img src="img/expand.svg">
+      </aside>
    `
 
    newItem.firstElementChild.style.background = `url('${item.image}')`;
@@ -162,4 +167,15 @@ defaultItems.forEach(function(item){
    newItem.firstElementChild.style.backgroundSize = 'cover';
 
    allItems.appendChild(newItem)
+
+   
+   if (index > 9) {
+      newItem.style.display = "none"
+   }
+
+   // event to display all items
+   seeAllButton.addEventListener('click', function(){
+      newItem.style.display = "initial"
+   });
 })
+

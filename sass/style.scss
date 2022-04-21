@@ -45,7 +45,7 @@ body {
       display: flex;
       justify-content: space-between;
       font-family: $roboto;
-      background-color: lighten($gold, 35%);
+      background-color: $cream;
       padding: 10px 20px;
       margin: 20px 0 50px 0;
       border-radius: 5px;
@@ -83,8 +83,24 @@ body {
    #all {
       margin: 20px 0 0 0;
 
-      h2 {
-         margin-bottom: 20px;
+      & > div {
+         display: flex;
+         justify-content: space-between;
+         margin-bottom: 30px;
+
+         button {
+            font-size: 1.05rem;
+            font-family: $roboto;
+            background-color: transparent;
+            border: 0;
+            border-bottom: 1px solid $black;
+            outline: 0;
+            cursor: pointer;
+
+            &:active {
+               color: $tan;
+            }
+         }
       }
 
       #allItems {
