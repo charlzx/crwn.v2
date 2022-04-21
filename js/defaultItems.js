@@ -144,6 +144,10 @@ let defaultItems = [
 let allItems = document.querySelector('#allItems')
 let seeAllButton = document.querySelector('#see-all')
 
+
+let overlay = document.createElement('div')
+overlay.setAttribute('class', 'popup-overlay')
+
 defaultItems.forEach(function(item, index){
    let newItem = document.createElement('div')
    newItem.setAttribute('class', 'item-card')
@@ -183,8 +187,6 @@ defaultItems.forEach(function(item, index){
    newItem.addEventListener('click', function(e){
       
       if (e.target.classList.contains('expand')) {
-         console.log(e.target)
-
          let popup = document.createElement('div')
          popup.setAttribute('class', 'popup-card')
 
@@ -204,7 +206,7 @@ defaultItems.forEach(function(item, index){
                <button>Add to Cart</button>
                
                <aside>
-                  <img class="expand" src="img/cancel.svg" alt="exit the item tag">
+                  <img class="remove-popup" src="img/cancel.svg" alt="exit the item tag">
                </aside>
             </div>
          `
@@ -213,10 +215,9 @@ defaultItems.forEach(function(item, index){
          popup.firstElementChild.style.backgroundRepeat = "no-repeat";
          popup.firstElementChild.style.backgroundSize = 'cover';
 
-         let overlay = document.createElement('div')
-         overlay.setAttribute('class', 'popup-overlay')
 
          overlay.appendChild(popup)
+         overlay.style.display = 'block'
          
          document.body.style.overflowY = 'hidden'
          document.body.appendChild(overlay)
@@ -224,5 +225,12 @@ defaultItems.forEach(function(item, index){
    });
 
    // remove popup
+   document.body.addEventListener('click', function(e){
+      if (e.target.classList.contains('remove-popup')){
+         document.body.style.overflowY = 'scroll';
+         overlay.style.display = 'none'
+         overlay.innerHTML = "";
+      }
+   })
 })
 
