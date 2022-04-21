@@ -1,27 +1,28 @@
-@use 'config' as config;
-@use 'popup';
-@use 'fromJs';
-@use 'animations';
+@use 'config' as *;
+@forward 'popup';
+@forward 'fromJs';
+@forward 'animations';
 
 h1, h2, h3, h4, h5, h6 {
-   font-family: config.$roboto;
+   font-family: $roboto;
 }
 
 body {
-   background-color: config.$white;
-   color: config.$charcoal;
+   background-color: $white;
+   // border: 1px solid $black;
+   color: $charcoal;
    padding: 40px 5% 20%;
 
    hr {
       border: 0;
-      background-color: lighten(config.$black, 80%);
+      background-color: lighten($black, 80%);
       margin: 20px 0 40px 0;
       // background-color: red;
       height: 1px;
    }
    
    header {
-      font-family: config.$roboto;
+      font-family: $roboto;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -43,12 +44,13 @@ body {
    .links {
       display: flex;
       justify-content: space-between;
-      font-family: config.$roboto;
-      background-color: lighten(config.$gold, 20%);
+      font-family: $roboto;
+      background-color: lighten($gold, 35%);
       padding: 10px 20px;
       margin: 20px 0 50px 0;
       border-radius: 5px;
       align-items: center;
+      border: 1px solid $black;
       
       a {
          color: inherit;
@@ -64,9 +66,9 @@ body {
       div {
          span, p {
             width: 0;
-            background-color: config.$black;
+            background-color: $black;
             border-radius: 5px;
-            height: 3px;
+            height: 1px;
             visibility: hidden;
             }
 
@@ -85,25 +87,11 @@ body {
          margin-bottom: 20px;
       }
 
-      section {
+      #allItems {
          display: grid;
-         grid-template-columns: repeat(4, 1fr);
-         gap: 10px;
-
-         & > div {
-            border-radius: 10px;
-            overflow: hidden;
-         }
-         
-         .imageDiv {
-            // width: 100%;
-            height: 300px;
-            overflow: hidden;
-            
-            img {
-               width: 100%;
-            }
-         }
-      }
+         grid-template-columns: repeat(5, 1fr);
+         gap: 20px 15px;
+         text-decoration: double;
+      }   
    }
 }
