@@ -1,0 +1,25 @@
+{
+  "name": "crwn-v2",
+  "version": "1.0.0",
+  "description": "improved version of my crwn repo https://www.github.com/charlz-s/crwn, with more functionality.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlz-s/crwn.v2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charlz-s/crwn.v2/issues"
+  },
+  "homepage": "https://github.com/charlz-s/crwn.v2#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "gulp-sass": "^5.1.0"
+  }
+}
