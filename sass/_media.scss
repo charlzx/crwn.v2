@@ -53,7 +53,7 @@
 
       & > #all > #allItems {
          display: flex;
-         overflow: scroll;
+         overflow: auto;
          gap: 0;
       }
    }

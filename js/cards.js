@@ -40,6 +40,7 @@ defaultItems.forEach(function(item, index){
    // event to display all items
    seeAllButton.addEventListener('click', function(){
       newItem.style.display = "initial"
+      seeAllButton.style.display = "none"
    });
    
    // expand item card

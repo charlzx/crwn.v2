@@ -19,10 +19,18 @@ body {
    }
    
    header {
+      position: fixed;
+      width: 94.5%;
+      width: 100%;
       font-family: $roboto;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      z-index: 20;
+      padding: 15px 5% 10px;
+      background-color: $white;
+      top: 0;
+      left: 0;
       
       a {
          cursor: pointer;
@@ -35,20 +43,20 @@ body {
       svg {
          cursor: pointer;
          height: 35px;
+         position: relative;
+         z-index: 2;
       }
 
-      section {
-         position: fixed;
-         right: 5%;
-         z-index: 20;
-         background-color: $white;
-         padding: 10px;
-         clip-path: circle();
+      & > section {
+         position: absolute;
+         right: 4.25%;
+         padding: 10px 0;
 
          span {
-            position: absolute;
-            right: 22.5px;
-            bottom: 16.5px;
+            // position: absolute;
+            position: relative;
+            right: 26px;
+            bottom: 7.5px;
          }
       }
    }
