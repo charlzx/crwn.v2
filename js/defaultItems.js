@@ -199,7 +199,7 @@ defaultItems.forEach(function(item, index){
                <div class="desc">
                   <h3>Description</h3>
                   <p class="desc-text">
-                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, consectetur? Maxime minima iste reprehenderit saepe nisi doloremque omnis porro officia totam ducimus delectus aspernatur quas, explicabo velit ea voluptatibus! Minima nihil facilis corrupti suscipit voluptas soluta distinctio dolorem praesentium ab?
+                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat, consectetur? Maxime minima iste reprehenderit saepe nisi doloremque omnis porro officia totam ducimus delectus aspernatur quas.
                   </p>
                </div>
 
@@ -214,6 +214,7 @@ defaultItems.forEach(function(item, index){
          popup.firstElementChild.style.background = `url('${item.image}')`;
          popup.firstElementChild.style.backgroundRepeat = "no-repeat";
          popup.firstElementChild.style.backgroundSize = 'cover';
+         popup.firstElementChild.style.backgroundPosition = '100%';
 
 
          overlay.appendChild(popup)
