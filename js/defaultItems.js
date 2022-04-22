@@ -1,3 +1,16 @@
+// floating cart icon
+let cartIcon = document.querySelector('#cart-icon')
+let cartSvg = document.querySelector('.svg')
+let cartDiv = document.createElement('div')
+
+// recently added section
+let allItems = document.querySelector('#allItems')
+let seeAllButton = document.querySelector('#see-all')
+
+// item card overlay
+let overlay = document.createElement('div')
+
+// existing objects
 let defaultItems = [
    {
       id: 1,

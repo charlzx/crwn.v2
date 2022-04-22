@@ -1,10 +1,7 @@
-let cartIcon = document.querySelector('#cart-icon')
-let cartSvg = document.querySelector('.svg')
-let cartDiv = document.createElement('div')
 cartDiv.id = "cart-div"
 
 cartDiv.innerHTML = `
-   <section></section>
+   <section id="cart-list"></section>
    <button>Go To Checkout</button>
    `
    cartDiv.style.display = 'none';

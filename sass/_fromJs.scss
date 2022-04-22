@@ -25,13 +25,16 @@
       align-items: center;
       border-top: 1px solid $black;
 
-      h3 {
-         margin-top: 2.5px;
+      .description {
+         display: none;
       }
 
-      span {
-         text-decoration: line-through;
-         margin-right: 1px;
+      h3 {
+         margin-top: 2.5px;
+
+         span {
+            margin-left: 1px;
+         }
       }
 
       button {

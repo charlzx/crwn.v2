@@ -1,10 +1,3 @@
-let allItems = document.querySelector('#allItems')
-let seeAllButton = document.querySelector('#see-all')
-
-// @media min-width: 400px
-const mediaWidth = window.matchMedia('( min-width: 400px )')
-
-let overlay = document.createElement('div')
 overlay.setAttribute('class', 'popup-overlay')
 
 defaultItems.forEach(function(item, index){
@@ -17,7 +10,8 @@ defaultItems.forEach(function(item, index){
       <div class="textDiv">
          <div>
             <p>${item.name}</p>
-            <h3><span>N</span>${item.price}</h3>
+            <h3>₦<span>${item.price}</span></h3>
+            <div class="description"></div>
          </div>
          <button>Add to Cart</button>
       </div>
