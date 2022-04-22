@@ -36,6 +36,21 @@ body {
          cursor: pointer;
          height: 35px;
       }
+
+      section {
+         position: fixed;
+         right: 5%;
+         z-index: 20;
+         background-color: $white;
+         padding: 10px;
+         clip-path: circle();
+
+         span {
+            position: absolute;
+            right: 22.5px;
+            bottom: 16.5px;
+         }
+      }
    }
 
    .links {
