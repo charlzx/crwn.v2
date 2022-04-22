@@ -35,9 +35,14 @@
 
    .popup-card {
       display: block;
+      width: 55%;
 
       .imageDiv {
          height: 300px;
+      }
+
+      aside > img {
+         height: 25px;
       }
    }
 }
@@ -81,5 +86,29 @@
 
    .item-card:last-child {
       margin-right: 0;
+   }
+
+   
+   .popup-card {
+      display: block;
+      width: 70%;
+   }
+}
+
+@media screen and (max-width:400px) {
+   .popup-card {
+      width: 90%;
+
+      .imageDiv {
+         height: 200px;
+      }
+
+      .textDiv {
+         padding: 10px 15px;
+
+         .desc {
+            margin: 10px 0 15px 0;
+         }
+      }
    }
 }

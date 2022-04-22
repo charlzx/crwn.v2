@@ -144,6 +144,8 @@ let defaultItems = [
 let allItems = document.querySelector('#allItems')
 let seeAllButton = document.querySelector('#see-all')
 
+// @media min-width: 400px
+const mediaWidth = window.matchMedia('( min-width: 400px )')
 
 let overlay = document.createElement('div')
 overlay.setAttribute('class', 'popup-overlay')
@@ -216,12 +218,18 @@ defaultItems.forEach(function(item, index){
          popup.firstElementChild.style.backgroundSize = 'cover';
          popup.firstElementChild.style.backgroundPosition = '100%';
 
+         // if (mediaWidth.matches) {
+         //    popup.firstElementChild.style.background = '';
+         // }
 
          overlay.appendChild(popup)
          overlay.style.display = 'block'
          
          document.body.style.overflowY = 'hidden'
+         // overlay.style.overflowY = 'scroll'
+
          document.body.appendChild(overlay)
+
       }
    });
 
