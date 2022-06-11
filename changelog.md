@@ -12,5 +12,9 @@ changes:
 
 -------------
 
-
-
+2. commmit message: remove .json
+changes:
+- remove json/default.json file i cannot send post requests since it's just a file in my local repo
+(i should have thought about this before trying to use fetch, but i didn't 🤦🏽‍♂️)
+- move the default items data to an array in [js/default.js](js/default.js), and run a for each loop to visualize items
+- started work on "add to cart" functionality (still incomplete)
