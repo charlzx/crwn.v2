@@ -9,7 +9,10 @@ for (let i = 0; i < carts.length; i++){
       // console.log(i, e.target, defaultItems[i])
       // console.log(defaultItems[i])
 
-      addItemToCart(defaultItems[i])
+      // split the ID and target the ID number
+      let splitId = carts[i].parentElement.parentElement.id.split("-")[1] - 1
+
+      addItemToCart(defaultItems[splitId])
    });
 
 
@@ -36,7 +39,7 @@ function addItemToCart (item){
    }
 
    // specific ID for each item
-   let checkId = document.getElementById(`item-${item.id}`)
+   let checkId = document.getElementById(`cart-item-${item.id}`)
 
    // if item ID does not exist (i.e the item hasn't been added to the cart), add the item to the cart
    if (!checkId){
@@ -48,7 +51,7 @@ function addItemToCart (item){
          </div>
       `
       
-      cartItem.setAttribute('id', `item-${item.id}`)
+      cartItem.setAttribute('id', `cart-item-${item.id}`)
 
       const cartList = document.querySelector('#cart-list')
       cartList.appendChild(cartItem)

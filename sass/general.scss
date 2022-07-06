@@ -67,7 +67,7 @@ body {
       font-family: $roboto;
       background-color: $cream;
       padding: 10px 20px;
-      margin: 50px 0 50px 0;
+      margin: 70px 0 50px 0;
       border-radius: 5px;
       align-items: center;
       border: 1px solid $black;
@@ -122,12 +122,20 @@ body {
             }
          }
       }
+   }
 
-      #allItems {
-         display: grid;
-         grid-template-columns: repeat(5, 1fr);
-         gap: 20px 15px;
-         text-decoration: double;
-      }   
+   #women, #men, #jackets, #sneakers, #hats {
+      margin: 20px 0 0 0;
+
+      h2 {
+         margin-bottom: 5px;
+      }
    }
 }
+
+.section {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr);
+   gap: 20px 15px;
+   text-decoration: double;
+}   

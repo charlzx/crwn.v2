@@ -2,10 +2,8 @@
 
 // grids
 @media screen and (max-width:1200px) {
-   body {
-      & > #all > #allItems {
-         grid-template-columns: repeat(4, 1fr);
-      }
+   .section {
+      grid-template-columns: repeat(4, 1fr);
    }
 }
 
@@ -16,23 +14,21 @@
 }
 
 @media screen and (max-width:900px) {
-   body {
-      & > #all > #allItems {
-         grid-template-columns: repeat(3, 1fr);
-      }
+   .section {
+      grid-template-columns: repeat(3, 1fr);
    }
 }
 
 @media screen and (max-width:785px) {
    body {
       padding: 20px 3%;
-
-      & > #all > #allItems {
-         gap: 15px;
-         grid-template-columns: repeat(3, 1fr);
-      }
    }
 
+   .section {
+      gap: 15px;
+      grid-template-columns: repeat(3, 1fr);
+   }
+   
    .popup-card {
       display: block;
       width: 55%;
@@ -51,13 +47,32 @@
    body {
       padding: 20px 5%;
 
-      & > #all > #allItems {
-         display: flex;
-         overflow: auto;
-         gap: 0;
-      }
    }
 
+   #all .section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+
+      .item-card {
+         margin-right: 0;
+         overflow: hidden;
+
+         .imageDiv {
+            height: 200px;
+         }
+         
+         .textDiv {
+            width: 100%;
+         }
+      }
+   }
+   
+   .section {
+      display: flex;
+      overflow: auto;
+      gap: 0;
+   }
    
    .item-card {
       overflow: visible;
@@ -92,6 +107,19 @@
    .popup-card {
       display: block;
       width: 70%;
+   }
+}
+
+@media screen and (max-width:500px) {
+   body {
+      .links {
+         padding: 10px 10px;
+         overflow: auto;
+         
+         a {
+            font-size: 1rem;
+         }
+      }
    }
 }
 

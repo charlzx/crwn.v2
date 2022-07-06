@@ -191,9 +191,12 @@ const defaultItems = [
    }
 ]
 
+
+// default catergory
 defaultItems.forEach((newItem, index) => {
    let item = document.createElement('div')
    item.setAttribute('class', 'item-card')
+   item.setAttribute('id', `item-${newItem.id}`)
 
    item.innerHTML = `
       <div class="imageDiv">
@@ -210,7 +213,6 @@ defaultItems.forEach((newItem, index) => {
          <img class="expand" src="img/expand.svg" alt="expand the item card">
       </aside>
    `
-
    
    item.firstElementChild.style.background = `url('${newItem.image}')`;
    item.firstElementChild.style.backgroundRepeat = "no-repeat";
@@ -219,7 +221,7 @@ defaultItems.forEach((newItem, index) => {
    allItems.appendChild(item)
 
    // display only the 4 first items by default
-   if (index > 3) {
+   if (index > 4) {
       item.style.display = "none"
    }
 
