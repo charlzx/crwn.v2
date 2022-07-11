@@ -46,8 +46,6 @@ class Catergory {
                         <p class="desc-text">${newItem.description}</p>
                      </div>
       
-                     <button>Add to Cart</button>
-                     
                      <aside>
                         <img class="remove-popup" src="img/cancel.svg" alt="exit the item tag">
                      </aside>

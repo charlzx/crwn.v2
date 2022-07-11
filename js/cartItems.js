@@ -2,7 +2,7 @@
 let carts = document.querySelectorAll(".cart-button");
 
 let cartCount = document.querySelector('#cart-count')
-console.log(cartCount)
+// console.log(cartCount)
 
 for (let i = 0; i < carts.length; i++){
    carts[i].addEventListener("click", (e) => {

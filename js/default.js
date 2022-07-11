@@ -240,6 +240,7 @@ defaultItems.forEach((newItem, index) => {
       if (e.target.classList.contains('expand')) {
          let popup = document.createElement('div')
          popup.setAttribute('class', 'popup-card')
+         popup.setAttribute('id', `item-${newItem.id}`)
 
          popup.innerHTML = `
             <div class="imageDiv"></div>
@@ -251,9 +252,7 @@ defaultItems.forEach((newItem, index) => {
                   <h3>Description</h3>
                   <p class="desc-text">${newItem.description}</p>
                </div>
-
-               <button>Add to Cart</button>
-               
+  
                <aside>
                   <img class="remove-popup" src="img/cancel.svg" alt="exit the item tag">
                </aside>
